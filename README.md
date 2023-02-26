@@ -1,0 +1,3 @@
+Full-stack MERN-based web application to help track job-applications. Simple authentication with JWTs to differentiate users in the database. Allows for adding, favourite/pinning, filtering by key-terms, and deleting postings. Customizable daily goals and document expiration timers. Inactive users are automatically deleted after 4 months; however, this timer resets upon logging in. Users are given the option to delete their account and all authored documents within the Options menu.
+
+Future implementations will offer the option to enable push notifications nearing the end of the day if you are below your established daily goal, or add previous missed goals onto new days. 
