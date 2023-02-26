@@ -1,0 +1,456 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 7fr;
+}
+
+.header {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  background-color: #A18FC4;
+  color: #efefef;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr;
+  min-height: 13vh;
+}
+
+.header ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.header li {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.header-main-display {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  background-color: #efefef;
+}
+
+.mainDisplay {
+  width: 100%;
+  background-color: #F0D1E2;
+  padding: 2%;
+}
+
+.favouritesDisplay {
+  border-radius: 30px;
+  background: #F0D1E2;
+  box-shadow: inset 5px 5px 10px #ddc0d0,
+            inset -5px -5px 10px #ffe2f4;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  width: clamp(250px, 20%, 350px);
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.navbar input[type="radio"]{
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.navbar label {
+  width: 30%;
+  padding: 1.5em 5em;
+  background: #efefef;
+  border: none;
+  border-radius: .5rem;
+  color: #444;
+  font-size: clamp(1rem, 1vw, 1.2rem);
+  font-weight: 800;
+  letter-spacing: .1rem;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+  box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+              -6px -6px 10px rgba(255, 255, 255, .5),
+              6px 6px 8px rgba(255, 255, 255, .075),
+              6px 6px 10px rgba(0, 0, 0, .15);
+}
+
+.navbar label:hover {
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+              -2px -2px 4px rgba(255, 255, 255, .4),
+              2px 2px 2px rgba(255, 255, 255, .05),
+              2px 2px 4px rgba(0, 0, 0, .1);
+}
+
+.navbar input[type='radio']:checked + label {
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
+              inset -2px -2px 4px rgba(255, 255, 255, .5),
+              inset 2px 2px 2px rgba(255, 255, 255, .2),
+              inset 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.createForm {
+  border-radius: 30px;
+  background: #F0D1E2;
+  box-shadow: inset 5px 5px 10px #ddc0d0,
+            inset -5px -5px 10px #ffe2f4;
+  padding: 2%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 4fr 1fr 1fr;
+}
+
+.formDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.createForm input {
+  border-radius: 10px;
+  border: none;
+  height: 4vh;
+  width: 90%;
+  font-size: 1.2rem;
+  padding-left: 3%;
+  align-self: center;
+  margin-bottom: 5%;
+  color: #444;
+  background-color: #efefef;
+}
+
+.createForm input:focus{
+  background-color: white;
+  outline: none;
+}
+
+.createForm label {
+  align-self: flex-start;
+  margin-left: 5%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.createFormTags {
+  display: flex;
+  align-items: center;
+}
+
+.createFormTags input {
+  margin: 0;
+  height: 1rem;
+}
+
+.createFormTags label {
+  font-size: 0.85rem;
+
+}
+
+.formDiv:nth-child(3){
+  grid-column: 1 / span 2;
+}
+
+.createForm textarea {
+  border-radius: 10px;
+  border: none;
+  resize: none;
+  height: 100%;
+  width: 95%;
+  padding-left: 2%;
+  align-self: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #444;
+  padding-top: 1%;
+  margin-bottom: 2%;
+  background-color: #efefef;
+}
+
+.createForm textarea:focus{
+  background-color: white;
+  outline: none;
+}
+
+.createForm button {
+  border: none;
+  grid-row: 4;
+  grid-column: 2;
+  align-self: center;
+  justify-self: flex-end;
+  margin-right: 10%;
+  height: 2.5rem;
+  width: 50%;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #444;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.createForm button:hover {
+  scale: 1.1;
+  background-color: #A18FC4;
+  color: #efefef;
+}
+
+.viewAllContainer {
+  border-radius: 30px;
+  background: #F0D1E2;
+  box-shadow: inset 5px 5px 10px #ddc0d0,
+            inset -5px -5px 10px #ffe2f4;
+  padding: 2%;
+  height: 100vh;
+  overflow-y: scroll;
+  
+}
+
+.viewAllApplications {
+  margin-bottom: 1%;
+  align-items: center;
+  padding-left: 2%;
+  border-radius: 10px;
+  height: 3rem;
+  background-color: #efefef;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+}
+
+.expandedViewAllApplication {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-rows: 3rem auto;
+  background-color: #efefef;
+  margin-bottom: 1%;
+  align-items: center;
+  padding-left: 2%;
+  border-radius: 10px;
+}
+
+.viewAllApplications:hover, .expandedViewAllApplication:hover {
+  background-color: white;
+}
+
+.viewAllApplications span, .expandedViewAllApplication span {
+  cursor: pointer;
+
+}
+
+.viewAllApplications span:hover, .expandedViewAllApplication span:hover {
+  animation: hoverOverIcon 1s infinite linear;
+}
+
+@keyframes hoverOverIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(5deg);
+  }
+  66% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.favourited {
+  color: darkorange;
+  
+}
+
+.searchContainer {
+  grid-column: 1 / span 2;
+  background: #F0D1E2;
+  box-shadow: inset 5px 5px 10px #ddc0d0,
+            inset -5px -5px 10px #ffe2f4;
+  padding: 2%;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+}
+
+.searchForm {
+  display: flex;
+  color: #efefef;
+  width: 50%;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  background-color: #444;
+  border-radius: 30px;
+  padding: 2%;
+}
+
+.searchForm input {
+  border-radius: 10px;
+  border: none;
+  height: 4vh;
+  width: 50%;
+  font-size: 1.2rem;
+  padding-left: 3%;
+  align-self: center;
+  margin-bottom: 5%;
+  color: #444;
+  background-color: #efefef;
+  margin-top: 3%;
+}
+
+.searchForm button, .loginSignup button{
+  height: 2rem;
+  width: 6rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: inherit;
+  color: black;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.searchForm input:focus, .loginSignup input:focus {
+  outline: none;
+  background-color: white;
+}
+
+.searchForm input:hover, .searchForm button:hover, .loginSignup input:hover, .loginSignup button:hover {
+  background-color: white;
+}
+
+.searchResultContainer {
+  padding: 2%
+}
+
+.headerLoginSignup {
+  width: 30vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.welcomeBackBanner {
+  width: 30vw;
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loginSignup {
+  background-color: #ddc0d0 ;
+  grid-column: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10%;
+}
+
+.loginSignup label {
+  font-size: 1.5rem;
+}
+
+.loginSignup input {
+  border-radius: 10px;
+  border: none;
+  height: 4vh;
+  width: 50%;
+  font-size: 1.2rem;
+  padding-left: 3%;
+  align-self: center;
+  margin-bottom: 2%;
+  color: #444;
+  background-color: #efefef;
+}
+
+.optionsMenuPage {
+  background-color: #444;
+  border-radius: 10px;
+  padding: 2%;
+  color: #efefef;
+  display: flex;
+  flex-direction: column;
+}
+
+.optionsMenuPage input {
+  width: 50%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.accountButtons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accountMenuPage {
+  background-color: #444;
+  border-radius: 10px;
+  padding: 2%;
+  color: #efefef;
+  display: flex;
+  flex-direction: column;
+}
+
+.accountMenuPage button, .optionsMenuPage button {
+  width: 6rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: inherit;
+  color: black;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.accountMenuPage button:hover {
+  background-color: crimson;
+}
+
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  right: 15%;
+  top: 33%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.deleteButton:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+

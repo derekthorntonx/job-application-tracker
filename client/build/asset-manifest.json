@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/job-application-manager/static/css/main.a64925bc.css",
+    "main.js": "/job-application-manager/static/js/main.aa5642e6.js",
+    "index.html": "/job-application-manager/index.html",
+    "main.a64925bc.css.map": "/job-application-manager/static/css/main.a64925bc.css.map",
+    "main.aa5642e6.js.map": "/job-application-manager/static/js/main.aa5642e6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a64925bc.css",
+    "static/js/main.aa5642e6.js"
+  ]
+}
